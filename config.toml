@@ -1,0 +1,46 @@
+theme = "gruvbox"
+[editor]
+line-number = "relative"
+scroll-lines = 1
+auto-pairs = false
+bufferline = "multiple"
+cursorline = true
+rulers = [120]
+true-color = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = true
+
+[editor.indent-guides]
+character = "|"
+render = true
+
+[editor.lsp]
+display-messages = true
+auto-signature-help = false
+
+[editor.statusline]
+left = ["mode", "spinner", "version-control", "file-name"]
+
+[keys.normal]
+g = { a = "code_action" } # Maps `ga` to show possible code actions
+"ret" = ["move_line_down", "goto_first_nonwhitespace"] # Maps the enter key to move to start of next line
+D = "delete_char_backward"
+"A-," = "goto_previous_buffer"
+"A-." = "goto_next_buffer"
+"A-w" = ":buffer-close"
+"A-/" = "repeat_last_motion"
+A-x = "extend_to_line_bounds"
+X = ["extend_line_up", "extend_to_line_bounds"]
+
+[keys.select]
+A-x = "extend_to_line_bounds"
+X = ["extend_line_up", "extend_to_line_bounds"]
+
+[keys.insert]
+j = { k = "normal_mode" } # Maps `jk` to exit insert mode
